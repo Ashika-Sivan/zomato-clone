@@ -1,0 +1,572 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@200;400;500;700&display=swap");                 
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html{
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+}
+body{
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+}
+.row{
+  display: flex;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+/* Header section */
+header{
+  width: 100%;
+  color: white;
+  position: absolute;
+}
+/* Cropped navigation bar */
+nav{
+  width: 73%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  font-weight: 100;
+  background: transparent;
+  padding: 0.3rem 0px;
+  color: rgb(255, 255, 255);
+}
+/* logo and text */
+nav .nav-element{
+  padding-bottom:1rem;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0 0 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+nav .nav-element a{
+  color: rgb(255, 255, 255);
+  font-weight: 420;
+  font-size: 1.4rem;
+}
+/* navigation right */
+nav .right-nav{
+  display: flex;
+}
+nav .right-nav .nav-element a{
+  margin:  2rem;
+  font-size: 1.65rem;
+  font-weight:350;
+  padding: 0 0.1rem;
+  letter-spacing: 0.07rem;
+}
+/* sidebar menu */
+.menu-btn{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 2;
+ height: 100%;
+ width: auto;
+ margin: 2rem;
+ display: none;
+}
+/* top section */
+.top{
+  position: relative;
+  height: calc(100vh - 30rem);
+  min-height: 42rem;
+  max-height: 57rem;
+  margin-bottom: 4rem;
+}
+/* background image */
+.top .bg-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: scale(1.1);
+  max-height: 40.8rem;
+  width: 100%;
+  margin-bottom: 4rem;
+  object-fit: cover;
+}
+img{
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+/* central container */
+.top .center-container{
+  position: absolute;
+  bottom: calc(50% - 11.1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .z-logo{
+  height: 6rem;
+  width: 30rem;
+  position: relative;
+}
+.main .top h1{
+  color: white;
+  font-weight: 100;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  letter-spacing: 0.12rem;
+}
+.main .top .city{
+  font-size: 35px;
+  font-weight: 400;
+}
+/* search-box */
+.main .top .search-bar{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 0.6rem;
+  margin-top: 3.2rem;
+  border: 1px solid rgb(255, 255, 255);
+  height: 5.35rem;
+  align-items: center; 
+}
+
+/* seach left */
+.main .top .search-bar .location{
+  width: 24rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main .top .search-bar .location input{
+  border:none;
+  font-size: 1.4rem;
+}
+.main .top .search-bar .line{
+  width: 0rem;
+  height: 2rem;
+  border: 0.01rem solid rgb(207, 207, 207);
+}
+/* search right */
+.main .top .search-bar .search{
+  display: flex;
+  align-items: center;
+  width: 53.6rem; 
+  display: flex;
+  position: relative;
+}
+.main .top .search-bar .search svg {
+  display: flex;
+  width: 5rem;
+}
+.main .top .search-bar .search input{
+  border:none;
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+/* main body*/
+.main-body{
+  position: relative;
+  width: 100%;
+  max-width: 110rem;
+  margin: auto;
+}
+.fst-sec{
+    display: flex;
+    width: 100%;
+    margin-bottom: 6rem;
+}
+.element{
+  width: 100%;
+  max-width: 50%;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.element-img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.element-img img{
+  width: 100%;
+  height: 100%;
+  max-height: 24rem;
+  object-fit: cover; 
+  border: 1px solid rgb(243, 240, 240);
+  border-radius: 20px; 
+}
+.element .element-info{
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  bottom: 0;
+  width: 100%; 
+  padding: 1rem 2rem 1.6rem;
+  border-radius: 0 0 2rem 2rem;
+  border: 1px solid rgb(243, 240, 240); /
+}
+.element .element-info .element-title{
+  font-size: 2rem;
+  font-weight: 540;
+  line-height: 2.5rem;
+}
+.element .element-info .element-details{
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  font-weight: 300;
+  color: rgb(79, 77, 77);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* second section */
+.localities .localities-header{
+  font-size: 3.6rem;
+  font-weight:100;
+  margin: 0;
+  margin-bottom: 4rem;
+  color: rgb(56, 56, 56);
+}
+.localities .localities-header .city{
+  font-size: 3.8rem;
+  font-weight: 540;
+  color: black;
+}
+.localities-list{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+.locality{
+  padding: 1.2rem 1.5rem;
+  background: rgb(255, 255, 255);
+  border-radius: 0.6rem;
+  width: 32.3%;
+  border: 1px solid rgb(226, 225, 225);
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  box-shadow: rgba(28, 28, 25, 0.1) 0px 1.126px 2.85px;
+  cursor:pointer;
+  align-items: center;
+  justify-content: space-between;
+}
+.locality .locality-head{
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgb(28, 28, 28);
+  margin: 0 0 0.5px;
+}
+.locality .places{
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin: 0;
+  color: rgb(54, 54, 54);
+  font-weight: 200;
+}
+.locality:hover{
+  box-shadow: rgba(28, 28, 28, 0.08) 0 4px 8px;
+}
+.final{
+  padding-left: 10%;
+}
+
+/* app section */
+.app-ad{
+  background-color: rgb(255, 251, 247);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-ad .app-container{
+ display: flex;
+ align-items: center;
+}
+.app-ad .mob-img{
+  position: relative;
+  max-width: 100%;
+  width: 25rem;
+  height: 45rem;
+  overflow: hidden;
+  margin-right: 2rem;
+}
+.app-ad .mob-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.app-ad .app-info{
+  margin-left: 2rem;
+}
+.app-ad .app-info .app-head{
+color: rgb(15, 12, 12);
+margin: 0 0 1.4rem;
+font-size: 4.4rem;
+font-weight: 500;
+line-height: 5.5rem;
+
+}
+.app-description{
+  font-size: 1.6rem;
+  margin: 0 0 2.5rem;
+  width: 100%;
+  line-height: 3.2rem;
+  font-weight: 100;
+  color: rgb(154, 154, 160);
+}
+.app-options{
+  width: 40%;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  height: 4.1rem;
+  justify-content: space-between;
+}
+.app-option{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+input[type="radio"]{
+  accent-color: red;
+}
+.email-input{
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 10px;
+}
+input[type="email"]{
+  padding: 1.3rem;
+  font-size: 1.6rem;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgb(207, 207, 207);
+ border-radius: 0.6rem;
+ box-sizing: border-box; 
+}
+.email-input button{
+  background-color: rgb(239, 79, 95);
+  color: white;
+  border: none;
+  min-width: 15rem;
+  font-size: 1.6rem;
+  padding: 0 1.6rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.email-input button:hover{
+  background-color: rgb(220, 63, 79);;
+}
+.platform-desc{
+  line-height: 1.6;
+  margin: 0 0 1.6rem;
+  font-size: 1.4rem;
+  color: rgb(204, 190, 190);
+  font-weight: 100;
+}
+.platform .platform-buttons{
+  gap: 20px;
+}
+.platform .platform-buttons img{
+  position: relative;
+  object-fit: cover;
+  height: 4rem;
+  cursor: pointer;
+  max-width: 100%;
+  width: 13.7rem;
+}
+
+
+/* .social ul li img{
+  
+} */
+ /* Accordion */
+.explore{
+    width: 120rem;
+    margin: auto;
+    padding: 4rem;
+  }
+  .explore-head{
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0 0 2.5rem;
+    color: rgb(54, 54, 54);
+  }
+  .accordion-list{
+    display: flex;
+    flex-direction: column;
+  }
+  .accordion-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(90, 86, 86);
+    font-weight: 400;
+  }
+  .accordion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgb(224, 232, 238);
+    margin: 0 0 2.5rem;
+    padding: 2rem 2.3rem;
+    color: rgb(151, 147, 147);
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-weight: 100;
+    border-radius: .6rem;
+  }
+  .accordion-data{
+    display: none;
+    margin-top: 2rem;
+  }
+  .accordion-data ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .accordion-data ul li{
+  margin-right: 1.4rem;
+  color: rgb(130, 130, 130);
+  line-height: 2.6rem;
+  margin-bottom: 1rem;
+  }
+  .dot{
+    display: inline-block;
+    width: 0.3rem;
+    height: 0.3rem;
+    background: rgb(130, 130, 130);
+    border-radius: 50%;
+    margin-right: 1.2rem;
+  }
+  .accordion-data ul li:hover{
+    color: black;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* footer */
+  footer{
+    width: 100%;
+    background: rgb(248, 248, 248);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-container{
+    width: 110rem;
+    margin: auto;
+    position: relative;
+    padding:4.7rem 0 2.2rem
+  }
+  .footer-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+  .footer-top .logo{
+    height: 2.8rem;
+    width: 13.2rem;
+  }
+  .dropdowns{
+    display: flex;
+    gap: 10px;
+  }
+  .dropdowns .dropdown{
+    max-width: 100%;
+    width: max-content;
+    min-width: 10rem;
+    position: relative;
+    border: 1px solid rgb(175, 167, 167);
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+  }
+  .footer-top .flag{
+    width: auto;
+    height: 1.5rem;
+  }
+  .footer-top .text{
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+  .footer-middle{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+  }
+  .footer-titles{
+    font-size: 1.5rem;
+    font-weight: 200;
+    padding-bottom:1rem ;
+    letter-spacing: 0.2rem;
+  }
+  .footer-middle .footer-links{
+    position: relative;
+    flex: 1;
+    max-width: 18.3rem;
+  }
+  .footer-middle .footer-links ul{
+    list-style: none;
+  }
+  .footer-middle .footer-links ul li{
+    font-size: 1.5rem;
+    color: rgb(135, 131, 131);
+    line-height: 2.5rem;
+    font-weight: 100;
+    margin: 0.5rem 0px;
+    cursor: pointer;
+  }
+  .social ul{
+    width: 100%;
+    max-width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .social li{
+   margin-bottom: 2rem ;
+  }
+  .social li:hover{
+    cursor: pointer;
+  }
+  .platform-buttons:hover{
+  cursor: pointer;
+  }
+  .platform-buttons{
+    width: 100%;
+    max-width: 13.8rem;
+    gap: 1rem;
+  }
+  
+  .footer-end{
+    font-size: 1.3rem;
+    color: rgb(79, 79, 79);
+    line-height: 1.7rem;
+    margin-top: 2.3rem;
+  }
